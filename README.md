@@ -20,7 +20,7 @@ int     main(int argc, char **argv)
     int i;
 
     i = 1;
-    if (argc > 0)
+    if (argc > 1)
     {
         while (argv[i])
         {
@@ -35,4 +35,6 @@ int     main(int argc, char **argv)
 ```
 	$> ./example "Hello World!"
 	$> Hello World!
-
+	$> ./example Toto Tata
+	$> Toto
+	   Tata
