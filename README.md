@@ -5,7 +5,8 @@ This is a project of [Ecole 42](http://www.42.fr)
 
 libft is a _library_ for programming in C.
 
-<br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 Example
 -------
 
