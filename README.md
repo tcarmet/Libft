@@ -7,7 +7,7 @@ libft is a _library_ for programming in C.
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-Example
+Examples
 -------
 
 ```c
@@ -38,3 +38,29 @@ int     main(int argc, char **argv)
 	$> ./example Toto Tata
 	$> Toto
 	   Tata
+
+```c
+/* Another Example libft Program */
+
+#include "libft.h"
+
+int     main(int argc, char **argv)
+{
+    char    *str;
+
+    if (argc == 3)
+    {
+        if (argv[1] && argv[2])
+        {
+            str = ft_strjoin(argv[1], argv[2]);
+            ft_putendl(str);
+        }
+    }
+    else
+        ft_putstr("Error\n");
+    return (0);
+}
+
+```
+	$> ./example "Hello " "World!"
+	$> Hello World!
