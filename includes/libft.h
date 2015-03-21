@@ -86,5 +86,9 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strrev(char *str);
 void				ft_swapint(int *a, int *b);
 void				ft_swapchar(char *a, char *b);
+void				ft_free_tb(char ***s);
+char				*ft_strlower(char *str);
+size_t				ft_strlen_tab(char **tab);
+char				*ft_strjoin_free(char *s1, char *s2);
 
 #endif

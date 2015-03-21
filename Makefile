@@ -76,6 +76,10 @@ SRC		= ft_strrev.c\
 	ft_lstmap.c\
 	ft_swapchar.c\
 	ft_swapint.c\
+	ft_strlen_tab.c\
+	ft_strlower.c\
+	ft_free_tb.c\
+	ft_strjoin_free.c\
 
 
 OBJ 	= $(SRC:.c=.o)
