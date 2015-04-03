@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcarmet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/12/29 17:07:12 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/03/21 12:04:46 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/04/03 19:39:05 by tcarmet           #+#    #+#             */
+/*   Updated: 2015/04/03 19:39:06 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,24 @@
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list *ptr;
+	t_list		*list;
+	void		*content_cpy;
 
-	ptr = NULL;
-	if (!content || !content_size)
+	content_cpy = NULL;
+	if (!content)
+		content_size = 0;
+	else
 	{
-		if ((ptr = (t_list *)malloc(sizeof(t_list))) == NULL)
-			return (NULL);
-		if ((ptr->content = (void *)malloc(sizeof(content_size))) == NULL)
-			return (NULL);
-		ptr->content = NULL;
-		ptr->content_size = 0;
-		return (ptr);
+		content_cpy = ft_memalloc(content_size);
+		content_cpy = ft_memcpy(content_cpy, content, content_size);
 	}
-	if (content != NULL)
+	list = (t_list *)ft_memalloc(sizeof(t_list));
+	if (list)
 	{
-		if ((ptr = (t_list *)malloc(sizeof(t_list))) == NULL)
-			return (NULL);
-		if ((ptr->content = (void *)malloc(sizeof(content_size))) == NULL)
-			return (NULL);
-		ptr->content_size = content_size;
-		ft_memcpy(ptr->content, content, content_size);
-		ptr->next = NULL;
+		list->content = content_cpy;
+		list->content_size = content_size;
+		list->next = NULL;
+		return (list);
 	}
-	return (ptr);
+	return (NULL);
 }

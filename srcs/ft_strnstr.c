@@ -5,27 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/08 19:22:17 by tcarmet           #+#    #+#             */
-/*   Updated: 2014/11/09 18:59:28 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/04/03 19:45:52 by tcarmet           #+#    #+#             */
+/*   Updated: 2015/04/03 19:46:46 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char			*ft_strnstr(char const *s1, char const *s2, size_t n)
 {
-	size_t	tmp1;
-	size_t	tmp2;
+	unsigned int		i;
+	unsigned int		j;
+	unsigned int		length;
 
-	tmp1 = 0;
-	tmp2 = 0;
-	while (s1[tmp2] && tmp2 < n)
+	if (*s2 == '\0')
+		return ((char *)s1);
+	i = 0;
+	length = ft_strlen(s2);
+	while (s1[i] && i + length - 1 < n)
 	{
-		while (s2[tmp1] == s1[tmp2 + tmp1] && tmp2 + tmp1 < n)
-			tmp1++;
-		if (s2[tmp1] == '\0')
-			return ((char *)s1 + tmp2);
-		tmp2++;
+		if (s1[i] == *s2)
+		{
+			j = 0;
+			while (s1[i + j] == s2[j] && (i + j) < n)
+			{
+				if (s2[j + 1] == '\0' || (i + j) == n - 1)
+					return ((char *)s1 + i);
+				j++;
+			}
+		}
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

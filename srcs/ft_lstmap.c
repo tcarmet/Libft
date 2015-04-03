@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tcarmet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/12/29 17:05:09 by tcarmet           #+#    #+#             */
-/*   Updated: 2014/12/29 17:05:25 by tcarmet          ###   ########.fr       */
+/*   Created: 2015/04/03 19:20:48 by tcarmet           #+#    #+#             */
+/*   Updated: 2015/04/03 19:20:57 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
