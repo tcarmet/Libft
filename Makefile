@@ -6,7 +6,7 @@
 #    By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/04 11:00:56 by tcarmet           #+#    #+#              #
-#    Updated: 2015/04/03 19:51:25 by tcarmet          ###   ########.fr        #
+#    Updated: 2015/05/31 00:15:48 by tcarmet          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -100,22 +100,16 @@ INCS	= $(addprefix $(INCDIR), $(INC))
 all: $(NAME)
 
 $(NAME) :
-		@echo "Creating objects files..."
 		@gcc $(FLAG) -c $(SRCS) -I$(INCDIR)
 		@mkdir -p $(OBJDIR)
 		@mv $(OBJ) $(OBJDIR)
-		@echo "Done!"
-		@echo "Creating $(NAME).."
 		@ar rc $(NAME) $(OBJS)
 		@ranlib $(NAME)
-		@echo "Done!"
 
 clean:
 		@rm -rf $(OBJS)
 		@rm -rf $(OBJDIR)
-		@echo "objects files have been removed !"
 fclean: clean
 		@rm -rf $(NAME)
-		@echo "$(NAME) has been removed !"
 
 re: 	fclean all
