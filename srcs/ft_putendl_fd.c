@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 18:49:54 by tcarmet           #+#    #+#             */
-/*   Updated: 2014/11/07 18:59:12 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/08/13 19:07:06 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	write (fd, s, ft_strlen(s));
-	write (fd, "\n", 1);
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

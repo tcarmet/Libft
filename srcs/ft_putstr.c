@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:29:29 by tcarmet           #+#    #+#             */
-/*   Updated: 2015/05/20 16:16:15 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/08/13 19:05:25 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	write (1, s, ft_strlen(s));
+	write(1, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 19:23:47 by tcarmet           #+#    #+#             */
-/*   Updated: 2014/11/09 19:32:09 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/08/13 19:07:34 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_striter(char *s, void (*f)(char *))
 	if (s != NULL && f != NULL)
 	{
 		while (*s)
-			(*f) (s++);
+			(*f)(s++);
 	}
 }

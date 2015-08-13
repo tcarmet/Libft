@@ -6,7 +6,7 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 18:12:15 by tcarmet           #+#    #+#             */
-/*   Updated: 2014/11/10 18:30:40 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/08/13 19:06:19 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	{
 		while (*s)
 		{
-			(*f) (i, s++);
+			(*f)(i, s++);
 			i++;
 		}
 	}

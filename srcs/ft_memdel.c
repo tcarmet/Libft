@@ -6,13 +6,13 @@
 /*   By: tcarmet <tcarmet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 00:31:04 by tcarmet           #+#    #+#             */
-/*   Updated: 2014/11/13 17:28:42 by tcarmet          ###   ########.fr       */
+/*   Updated: 2015/08/13 19:01:13 by tcarmet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
 	if (!ap)
 		return ;
